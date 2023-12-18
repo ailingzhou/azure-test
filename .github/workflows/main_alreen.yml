@@ -21,6 +21,7 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: '3.8'
+          node-version: '16'
 
       - name: Create and start virtual environment
         run: |
@@ -64,7 +65,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'alreen'
-          node-version: '16'
+          app-name: 'alreen'        
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_025680241B684E34A2AAC70EE9228A15 }}
