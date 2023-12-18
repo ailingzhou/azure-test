@@ -65,5 +65,6 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'alreen'
+          node-version: '16'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_025680241B684E34A2AAC70EE9228A15 }}
